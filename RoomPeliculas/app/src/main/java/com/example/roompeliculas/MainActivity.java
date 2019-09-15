@@ -3,11 +3,17 @@ package com.example.roompeliculas;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    EditText et_user, et_password;
+    SharedPreferences prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,58 +21,80 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.actionbar_title);
+        et_user = findViewById(R.id.et_name);
+        et_password = findViewById(R.id.et_password);
+
+        prefs = getSharedPreferences("MyPreferences", MODE_PRIVATE);
+
 
     }
 
 
-    //Per afegir la fletxa a l'esquerra superior de la pantalla
-    @Override
+   @Override
+    protected void onResume() {
+        super.onResume();
+        String username = prefs.getString("user",null);
+        String password = prefs.getString("password",null);
 
-    public boolean onSupportNavigateUp() {
-
-        finish();
-
-        return true;
-
+        if (username != "" && password != "" )
+        {
+            goToListActivity();
+        }
     }
 
-    //Per afegir el menu a l'actionbar de l'activity (dreta)
-    @Override
 
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public void login(View view) {
 
-// Inflate the menu; this adds items to the action bar
+        if (checkFields()) {
 
-        getMenuInflater().inflate(R.menu.main_menu, menu);
-
-        return true;
-
+            goToListActivity();
+        }
     }
 
-    @Override
+    private boolean checkFields() {
 
-    public boolean onOptionsItemSelected(MenuItem item) {
+        String user = et_user.getText().toString();
+        String password = et_password.getText().toString();
 
-        switch (item.getItemId()) {
-
-            case R.id.goToInspo:
-
-                    Intent intent = new Intent(MainActivity.this, InspoActivity.class);
-                    startActivity(intent);
-
-                return (true);
-
-
-            case R.id.goToAdd:
-
-                intent = new Intent(MainActivity.this, FormActivity.class);
-                startActivity(intent);
-
-                return (true);
-
+        boolean fieldsOk = true;
+        if ("".equals(user)){
+            fieldsOk = false;
+            et_user.setError(getString(R.string.errEmptyUser));
+            Toast.makeText(this, R.string.errEmptyLogin,Toast.LENGTH_LONG).show();
+        } else if ("".equals(password)){
+            fieldsOk = false;
+            et_password.setError(getString(R.string.errEmptyPassword));
+            Toast.makeText(this,  R.string.errEmptyLogin,Toast.LENGTH_LONG).show();
         }
 
-        return (super.onOptionsItemSelected(item));
+        savePreferences();
+
+        return fieldsOk;
+    }
+
+    private void savePreferences() {
+
+        String user = et_user.getText().toString();
+        String password = et_password.getText().toString();
+
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("user", user);
+        editor.putString("password", password);
+
+        editor.commit();
+    }
+
+    private void goToListActivity() {
+
+        Intent intent = new Intent(MainActivity.this, ListActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void goToWeb(View view) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse("https://www.abc.es/play/cine/peliculas"));
+        startActivity(intent);
 
     }
 }

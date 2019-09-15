@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RoomPeliculas</string>
+    <string name="menu_inspo">Inspiration</string>
+    <string name="menu_add">Sign In</string>
+    <string name="actionbar_title">FilmAPP</string>
+
+    <string name="txt_List">My films</string>
+
+    <string name="txt_login">LOG IN</string>
+    <string name="txt_username">Email</string>
+    <string name="txt_password">Password</string>
+    <string name="txt_usernameHint">Introduce your email</string>
+    <string name="txt_passwordHint">Introduce your password</string>
+    <string name="errEmptyUser">Please, introduce your username</string>
+    <string name="errEmptyPassword">Please, introduce your password</string>
+    <string name="errEmptyLogin">E-mail and password cannot be empty.</string>
+    <string name="url">Go to ABC Films</string>
+    <string name="btn_login">LOG IN</string>
+
+    <string name="txt_form">NEW FILM</string>
+    <string name="txt_title">Introduce title...</string>
+    <string name="txt_description">Make a tiny description...</string>
+    <string name="txt_year">Year</string>
+    <string name="txt_rating">Rating (0 - 5)</string>
+    <string name="txt_url">Image link...</string>
+
+    <string name="errEmptyTitle">Please, introduce the title</string>
+    <string name="errEmptyDescription">Please, write a description</string>
+    <string name="errEmptyYear">Please, introduce the year</string>
+    <string name="errEmptyRating">Please, rate the film between 1-5</string>
+    <string name="errEmptyURL">Please, add an image </string>
+    <string name="errEmptyForm">Fields must not be empty</string>
+    <string name="btn_add">ADD</string>
+
+    <string name="errAPI">Connection has failed. Please, try again in a few minutes.</string>
+
+    <string name="txt_detail">DATA SHEET</string>
+    <string name="btn_delete">DELETE</string>
+    <string name="txt_Ghibli">STUDIO GHIBLI FILMOGRAPHY</string>
+</resources>

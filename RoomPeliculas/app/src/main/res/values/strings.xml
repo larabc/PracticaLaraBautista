@@ -3,4 +3,43 @@
     <string name="menu_inspo">Inspiración</string>
     <string name="menu_add">Registrar</string>
     <string name="actionbar_title">FilmAPP</string>
+
+    <string name="txt_List">Mis películas</string>
+
+    <string name="txt_login">LOG IN</string>
+    <string name="txt_username">Email</string>
+    <string name="txt_password">Contraseña</string>
+    <string name="txt_usernameHint">Introduce tu email</string>
+    <string name="txt_passwordHint">Introduce tu contraseña</string>
+
+    <string name="errEmptyUser">Porfavor, escribe tu usuario</string>
+    <string name="errEmptyPassword">Porfavor, escribe tu contraseña</string>
+    <string name="errEmptyLogin">E-mail y contraseña no pueden estar vacíos.</string>
+    <string name="url">Ir a ABC Películas</string>
+    <string name="btn_login">ENTRAR</string>
+
+    <string name="txt_form">NUEVA PELÍCULA</string>
+    <string name="txt_title">Introduce el título...</string>
+    <string name="txt_description">Haz una breve descripción...</string>
+    <string name="txt_year">Año de estreno</string>
+    <string name="txt_rating">Valoración (0 - 5)</string>
+    <string name="txt_url">URL de una imagen...</string>
+
+    <string name="errEmptyTitle">Porfavor, escribe un título</string>
+    <string name="errEmptyDescription">Porfavor, escribe una descripción</string>
+    <string name="errEmptyYear">Porfavor, escribe un año</string>
+    <string name="errEmptyRating">Porfavor, valora entre 1-5</string>
+    <string name="errEmptyURL">Porfavor, añade una imagen </string>
+    <string name="errEmptyForm">Porfavor, rellene todos los campos</string>
+    <string name="btn_add">AÑADIR</string>
+
+
+
+    <string name="errAPI">No ha sido posible conectarse a la API de Studio Ghibli, inténtelo más tarde</string>
+
+
+    <string name="txt_detail">FICHA TÉCNICA</string>
+    <string name="btn_delete">ELIMINAR</string>
+
+    <string name="txt_Ghibli"> FILMOGRAFÍA STUDIO GHIBLI</string>
 </resources>

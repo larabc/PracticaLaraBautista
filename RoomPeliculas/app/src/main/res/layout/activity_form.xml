@@ -1,9 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
     tools:context=".FormActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/txt_form"
+        android:textSize="30sp"
+        android:layout_marginBottom="40dp"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif-black">
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_margin="12dp"
+            android:textSize="16sp"
+            android:hint="@string/txt_title" />
+
+        <EditText
+            android:id="@+id/et_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:inputType="text"
+            android:textSize="16sp"
+            android:hint="@string/txt_description" />
+
+        <EditText
+            android:id="@+id/et_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_margin="12dp"
+            android:textSize="16sp"
+            android:hint="@string/txt_year" />
+
+        <EditText
+            android:id="@+id/et_rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_margin="12dp"
+            android:textSize="16sp"
+            android:hint="@string/txt_rating" />
+
+        <EditText
+            android:id="@+id/et_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_margin="12dp"
+            android:textSize="16sp"
+            android:hint="@string/txt_url" />
+    </LinearLayout>
+
+    <Button
+        android:onClick="createFilm"
+        android:text="@string/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:padding="12dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        />
+
+</LinearLayout>
