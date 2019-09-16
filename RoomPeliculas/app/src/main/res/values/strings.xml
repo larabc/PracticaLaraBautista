@@ -6,6 +6,12 @@
 
     <string name="txt_List">Mis películas</string>
 
+    <string name="tv_titleD">Título</string>
+    <string name="tv_descriptionD">Descripción</string>
+    <string name="tv_yearD">Año de estreno</string>
+    <string name="tv_ratingD">Nota</string>
+
+
     <string name="txt_login">LOG IN</string>
     <string name="txt_username">Email</string>
     <string name="txt_password">Contraseña</string>
@@ -28,7 +34,7 @@
     <string name="errEmptyTitle">Porfavor, escribe un título</string>
     <string name="errEmptyDescription">Porfavor, escribe una descripción</string>
     <string name="errEmptyYear">Porfavor, escribe un año</string>
-    <string name="errEmptyRating">Porfavor, valora entre 1-5</string>
+    <string name="errEmptyRating">Porfavor, valora entre 0-5</string>
     <string name="errEmptyURL">Porfavor, añade una imagen </string>
     <string name="errEmptyForm">Porfavor, rellene todos los campos</string>
     <string name="btn_add">AÑADIR</string>
@@ -41,5 +47,5 @@
     <string name="txt_detail">FICHA TÉCNICA</string>
     <string name="btn_delete">ELIMINAR</string>
 
-    <string name="txt_Ghibli"> FILMOGRAFÍA STUDIO GHIBLI</string>
+    <string name="txt_Ghibli"> FILMOGRAFÍA\nSTUDIO GHIBLI</string>
 </resources>

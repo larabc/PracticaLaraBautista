@@ -3,10 +3,17 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="colorDefault">#A9998C</color>
     <color name="colorWhite">#F8F8F8</color>
 
-    <color name="colorYellow">#FFC400</color>
+    <color name="colorBG">#fdf8f5</color>
+
+    <color name="colorFicha">#F5EDE7</color>
+    <color name="colorTitle">#393e41</color>
+    <color name="colorSubtitle">#5d6163</color>
+    <color name="colorTxt">#202224</color>
+    <color name="colorHint">#9fa3a7</color>
+
+    <color name="colorRed">#FF4800</color>
     <color name="colorBlack">#070606</color>
     <color name="colorGreen">#00E676</color>
 

@@ -3,10 +3,12 @@
 xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
-android:layout_height="wrap_content"
+android:layout_height="match_parent"
 android:orientation="vertical"
 android:layout_gravity="center_vertical"
-tools:context=".MainActivity">
+    android:gravity="center"
+    android:background="@color/colorBG"
+tools:context=".LoginActivity">
 
 <TextView
     android:layout_width="match_parent"
@@ -16,6 +18,7 @@ tools:context=".MainActivity">
     android:text="@string/txt_login"
     android:textSize="30sp"
     android:textStyle="bold"
+    android:textColor="@color/colorTitle"
     app:fontFamily="sans-serif-black" />
 
 
@@ -33,7 +36,7 @@ tools:context=".MainActivity">
 
         android:drawableLeft="@drawable/person"
         android:gravity="center_vertical"
-        android:textColor="@color/colorDefault" />
+        android:textColor="@color/colorTxt" />
 
     <EditText
         android:id="@+id/et_name"
@@ -43,8 +46,8 @@ tools:context=".MainActivity">
         android:layout_weight="1"
         android:hint="@string/txt_usernameHint"
         android:inputType="text"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorDefault"
+        android:textColor="@color/colorTxt"
+        android:textColorHint="@color/colorHint"
         android:textSize="16sp" />
 
 </LinearLayout>
@@ -62,7 +65,7 @@ tools:context=".MainActivity">
         android:layout_weight="4"
         android:drawableLeft="@drawable/lock"
         android:gravity="center_vertical"
-        android:textColor="@color/colorDefault" />
+        android:textColor="@color/colorTxt" />
 
     <EditText
         android:id="@+id/et_password"
@@ -72,8 +75,8 @@ tools:context=".MainActivity">
         android:layout_weight="1"
         android:hint="@string/txt_passwordHint"
         android:inputType="textPassword"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorDefault"
+        android:textColor="@color/colorTxt"
+        android:textColorHint="@color/colorHint"
         android:textSize="16sp" />
 
 </LinearLayout>
@@ -86,7 +89,7 @@ tools:context=".MainActivity">
     android:layout_marginTop="20dp"
     android:textSize="16sp"
     android:textStyle="bold"
-    android:textColor="@color/colorDefault"
+    android:textColor="@color/colorSubtitle"
     android:text="@string/url">
 </TextView>
 

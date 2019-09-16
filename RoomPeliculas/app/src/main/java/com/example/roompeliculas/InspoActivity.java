@@ -1,7 +1,9 @@
 package com.example.roompeliculas;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +24,7 @@ public class InspoActivity extends AppCompatActivity {
     ListView listView;
     ArrayList<PeliculaAPI> peliculasAPI;
     PeliculaAPIAdapter adapter;
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,7 @@ public class InspoActivity extends AppCompatActivity {
         listView = findViewById(R.id.listViewAPI);
         adapter = new PeliculaAPIAdapter(this, R.layout.row2, peliculasAPI);
         listView.setAdapter(adapter);
+        progressBar = findViewById(R.id.progressbar);
 
         getFilmsFromServer();
 
@@ -45,6 +49,7 @@ public class InspoActivity extends AppCompatActivity {
                 peliculasAPI.clear();
                 peliculasAPI.addAll(response.body());
                 adapter.notifyDataSetChanged();
+                progressBar.setVisibility(View.GONE);
             }
 
             @Override

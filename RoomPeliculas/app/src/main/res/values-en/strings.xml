@@ -6,6 +6,11 @@
     <string name="actionbar_title">FilmAPP</string>
 
     <string name="txt_List">My films</string>
+    <string name="tv_titleD">Title</string>
+    <string name="tv_descriptionD">Description</string>
+    <string name="tv_yearD">Year</string>
+    <string name="tv_ratingD">User rating</string>
+
 
     <string name="txt_login">LOG IN</string>
     <string name="txt_username">Email</string>

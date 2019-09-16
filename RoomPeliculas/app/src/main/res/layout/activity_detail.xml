@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:gravity="center_vertical"
+    android:background="@color/colorBG"
     tools:context=".DetailActivity">
 
     <TextView
@@ -13,57 +14,108 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/txt_detail"
-        android:textSize="30sp"
-        android:layout_marginBottom="40dp"
+        android:textSize="25sp"
+        android:layout_marginBottom="10dp"
         android:textStyle="bold"
+        android:textColor="@color/colorTitle"
         app:fontFamily="sans-serif-black">
 
     </TextView>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="50dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/tv_title"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:layout_margin="12dp"
-            android:textSize="16sp" />
+            android:background="@color/colorFicha"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv_description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:layout_margin="12dp"
-            android:textSize="16sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:paddingLeft="20sp"
+                android:paddingTop="20sp"
+                android:text="@string/tv_titleD"
+                android:textColor="@color/colorSubtitle"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tv_year"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:layout_margin="12dp"
-            android:textSize="16sp" />
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:paddingLeft="22sp"
+                android:textColor="@color/colorTxt"
+                android:textSize="18sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:paddingLeft="20sp"
+                android:text="@string/tv_descriptionD"
+                android:textColor="@color/colorSubtitle"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tv_rating"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:layout_margin="12dp"
-            android:textSize="16sp" />
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="22sp"
+                android:textColor="@color/colorTxt"
+                android:textSize="18sp" />
 
-        <ImageView
-            android:id="@+id/iv_image"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_margin="12dp"/>
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:paddingLeft="20sp"
+                android:text="@string/tv_yearD"
+                android:textColor="@color/colorSubtitle"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:paddingLeft="22sp"
+                android:textColor="@color/colorTxt"
+                android:textSize="18sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:paddingLeft="20sp"
+                android:text="@string/tv_ratingD"
+                android:textColor="@color/colorSubtitle"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:paddingLeft="22sp"
+                android:textColor="@color/colorTxt"
+                android:textSize="18sp" />
+
+
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp" />
+
+
+        </LinearLayout>
+</ScrollView>
 
     <Button
         android:onClick="deleteFilm"
@@ -71,11 +123,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
-        android:padding="12dp"
-        android:background="@color/colorPrimaryDark"
+        android:layout_marginVertical="12sp"
+
+
+        android:padding="5sp"
+        android:background="@color/colorRed"
         android:textColor="@color/colorWhite"
-        android:textSize="18sp"
+        android:textSize="16sp"
         />
 
 </LinearLayout>

@@ -3,11 +3,13 @@ package com.example.roompeliculas;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import com.example.roompeliculas.controller.PeliculaController;
@@ -16,22 +18,38 @@ import com.example.roompeliculas.model.Pelicula;
 import java.util.ArrayList;
 
 public class ListActivity extends AppCompatActivity {
-
+    EditText et_user, et_password;
     ListView listview;
     PeliculaAdapter adapter;
     ArrayList<Pelicula> peliculas;
     PeliculaController controller;
+    SharedPreferences prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
-        listview = findViewById(R.id.listView);
-        controller = PeliculaController.get(this); 
 
-        peliculas = new ArrayList<Pelicula>();
+        listview = findViewById(R.id.listView);
+        controller = PeliculaController.get(this);
+        et_user = findViewById(R.id.et_name);
+        et_password = findViewById(R.id.et_password);
+
+        prefs = getSharedPreferences("MyPreferences", MODE_PRIVATE);
+
+        String username = prefs.getString("user",null);
+        String password = prefs.getString("password",null);
+
+        if ((username==null) && (password==null))
+        {
+            goToLoginActivity();
+        }
+
+        peliculas = new ArrayList<>();
         adapter = new PeliculaAdapter(this, R.layout.row, peliculas);
         listview.setAdapter(adapter);
+
+
 
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -44,6 +62,12 @@ public class ListActivity extends AppCompatActivity {
 
 
     }
+
+    private void goToLoginActivity() {
+        Intent intent = new Intent(ListActivity.this, LoginActivity.class);
+        startActivity(intent);
+    }
+
 
     @Override
     protected void onResume() {

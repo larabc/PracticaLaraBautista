@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     EditText et_user, et_password;
     SharedPreferences prefs;
@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.actionbar_title);
         et_user = findViewById(R.id.et_name);
@@ -28,20 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
-
-   @Override
-    protected void onResume() {
-        super.onResume();
-        String username = prefs.getString("user",null);
-        String password = prefs.getString("password",null);
-
-        if (username != "" && password != "" )
-        {
-            goToListActivity();
-        }
-    }
-
 
     public void login(View view) {
 
@@ -86,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void goToListActivity() {
 
-        Intent intent = new Intent(MainActivity.this, ListActivity.class);
+        Intent intent = new Intent(LoginActivity.this, ListActivity.class);
         startActivity(intent);
     }
 
