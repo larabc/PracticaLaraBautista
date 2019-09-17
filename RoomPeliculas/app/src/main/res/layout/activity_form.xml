@@ -10,24 +10,22 @@
     android:background="@color/colorBG"
     tools:context=".FormActivity">
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/txt_form"
         android:textSize="30sp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="30dp"
         android:textStyle="bold"
         android:textColor="@color/colorTitle"
         app:fontFamily="sans-serif-black">
-
     </TextView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="12dp"
+        android:layout_marginRight="50sp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -44,23 +42,22 @@
                 android:gravity="center_vertical"
                 android:textColor="@color/colorTxt" />
 
-        <EditText
-            android:id="@+id/et_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:layout_margin="12dp"
-            android:layout_weight="1"
-            android:textColorHint="@color/colorHint"
-            android:textColor="@color/colorTxt"
-            android:textSize="16sp"
-            android:hint="@string/txt_title" />
-
+            <EditText
+                android:id="@+id/et_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_margin="12sp"
+                android:layout_weight="1"
+                android:textColorHint="@color/colorHint"
+                android:textColor="@color/colorTxt"
+                android:textSize="16sp"
+                android:hint="@string/txt_title" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <TextView
@@ -71,24 +68,22 @@
                 android:drawableLeft="@drawable/description"
                 android:gravity="center_vertical"
                 android:textColor="@color/colorTxt" />
-        <EditText
-            android:id="@+id/et_description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="12dp"
-            android:layout_weight="1"
-            android:textColorHint="@color/colorHint"
-            android:textColor="@color/colorTxt"
-            android:inputType="text"
-            android:textSize="16sp"
-            android:hint="@string/txt_description" />
-
+            <EditText
+                android:id="@+id/et_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12sp"
+                android:layout_weight="1"
+                android:textColorHint="@color/colorHint"
+                android:textColor="@color/colorTxt"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:hint="@string/txt_description" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <TextView
@@ -99,24 +94,22 @@
                 android:drawableLeft="@drawable/year"
                 android:gravity="center_vertical"
                 android:textColor="@color/colorTxt" />
-        <EditText
-            android:id="@+id/et_year"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:textColorHint="@color/colorHint"
-            android:textColor="@color/colorTxt"
-            android:layout_margin="12dp"
-            android:layout_weight="1"
-            android:textSize="16sp"
-            android:hint="@string/txt_year" />
-
+            <EditText
+                android:id="@+id/et_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColorHint="@color/colorHint"
+                android:textColor="@color/colorTxt"
+                android:layout_margin="12sp"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:hint="@string/txt_year" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <TextView
@@ -128,23 +121,22 @@
                 android:gravity="center_vertical"
                 android:textColor="@color/colorTxt" />
 
-            <EditText
-            android:id="@+id/et_rating"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:textColorHint="@color/colorHint"
-            android:textColor="@color/colorTxt"
-            android:layout_margin="12dp"
-            android:layout_weight="1"
-            android:textSize="16sp"
-            android:hint="@string/txt_rating" />
+                <EditText
+                android:id="@+id/et_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColorHint="@color/colorHint"
+                android:textColor="@color/colorTxt"
+                android:layout_margin="12sp"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:hint="@string/txt_rating" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <TextView
@@ -155,32 +147,31 @@
                 android:drawableLeft="@drawable/image"
                 android:gravity="center_vertical"
                 android:textColor="@color/colorTxt" />
-        <EditText
-            android:id="@+id/et_url"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:textColorHint="@color/colorHint"
-            android:textColor="@color/colorTxt"
-            android:layout_margin="12dp"
-            android:layout_weight="1"
-            android:textSize="16sp"
-            android:hint="@string/txt_url" />
-
+            <EditText
+                android:id="@+id/et_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColorHint="@color/colorHint"
+                android:textColor="@color/colorTxt"
+                android:layout_margin="12sp"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:hint="@string/txt_url" />
         </LinearLayout>
     </LinearLayout>
 
-    <Button
-        android:onClick="createFilm"
-        android:text="@string/btn_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
-        android:padding="12dp"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@color/colorWhite"
-        android:textSize="18sp"
-        />
+        <Button
+            android:onClick="createFilm"
+            android:text="@string/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:padding="12dp"
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            />
 
 </LinearLayout>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-android:layout_gravity="center_vertical"
-    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
     android:background="@color/colorBG"
-tools:context=".LoginActivity">
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
 
 <TextView
     android:layout_width="match_parent"
@@ -20,7 +20,6 @@ tools:context=".LoginActivity">
     android:textStyle="bold"
     android:textColor="@color/colorTitle"
     app:fontFamily="sans-serif-black" />
-
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -49,7 +48,6 @@ tools:context=".LoginActivity">
         android:textColor="@color/colorTxt"
         android:textColorHint="@color/colorHint"
         android:textSize="16sp" />
-
 </LinearLayout>
 
 <LinearLayout
@@ -78,7 +76,6 @@ tools:context=".LoginActivity">
         android:textColor="@color/colorTxt"
         android:textColorHint="@color/colorHint"
         android:textSize="16sp" />
-
 </LinearLayout>
 
 <TextView
@@ -93,7 +90,6 @@ tools:context=".LoginActivity">
     android:text="@string/url">
 </TextView>
 
-
 <Button
     android:onClick="login"
     android:text="@string/btn_login"
@@ -104,5 +100,4 @@ tools:context=".LoginActivity">
     android:background="@color/colorPrimaryDark"
     android:textColor="@color/colorWhite"
     android:textSize="18sp" />
-
 </LinearLayout>

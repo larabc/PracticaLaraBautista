@@ -23,7 +23,7 @@
     </TextView>
 <ScrollView
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="450dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,15 +31,21 @@
             android:background="@color/colorFicha"
             android:orientation="vertical">
 
-            <TextView
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="40sp"
+                android:layout_marginTop="20sp">
+
+                <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
                 android:paddingLeft="20sp"
-                android:paddingTop="20sp"
                 android:text="@string/tv_titleD"
                 android:textColor="@color/colorSubtitle"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -47,9 +53,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:paddingLeft="22sp"
+                android:paddingLeft="25sp"
+                android:paddingBottom="10sp"
                 android:textColor="@color/colorTxt"
-                android:textSize="18sp" />
+                android:textStyle="italic"
+                android:textSize="20sp" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -57,16 +65,18 @@
                 android:paddingLeft="20sp"
                 android:text="@string/tv_descriptionD"
                 android:textColor="@color/colorSubtitle"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="22sp"
+                android:paddingHorizontal="25sp"
+                android:paddingBottom="10sp"
                 android:textColor="@color/colorTxt"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="italic"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -75,7 +85,7 @@
                 android:paddingLeft="20sp"
                 android:text="@string/tv_yearD"
                 android:textColor="@color/colorSubtitle"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -83,9 +93,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:paddingLeft="22sp"
+                android:paddingLeft="25sp"
+                android:paddingBottom="10sp"
                 android:textColor="@color/colorTxt"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="italic"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -93,7 +105,7 @@
                 android:paddingLeft="20sp"
                 android:text="@string/tv_ratingD"
                 android:textColor="@color/colorSubtitle"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -101,9 +113,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:paddingLeft="22sp"
+                android:paddingLeft="25sp"
+                android:paddingBottom="10sp"
                 android:textColor="@color/colorTxt"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="italic"/>
+
+            </LinearLayout>
 
 
             <ImageView

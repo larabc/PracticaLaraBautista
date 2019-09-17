@@ -1,4 +1,4 @@
-package com.example.roompeliculas;
+package com.example.roompeliculas.retrofit;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,11 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-
+import com.example.roompeliculas.R;
 import com.example.roompeliculas.model.PeliculaAPI;
 
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 

@@ -5,7 +5,7 @@
     <string name="menu_add">Sign In</string>
     <string name="actionbar_title">FilmAPP</string>
 
-    <string name="txt_List">My films</string>
+    <string name="txt_List">MY FILMS</string>
     <string name="tv_titleD">Title</string>
     <string name="tv_descriptionD">Description</string>
     <string name="tv_yearD">Year</string>

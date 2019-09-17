@@ -1,5 +1,6 @@
 package com.example.roompeliculas;
 
+import android.app.Application;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
@@ -10,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.roompeliculas.model.PeliculaAPI;
 import com.example.roompeliculas.retrofit.MyService;
+import com.example.roompeliculas.retrofit.PeliculaAPIAdapter;
 import com.example.roompeliculas.retrofit.RetrofitClientInstance;
 
 import java.util.ArrayList;
@@ -54,7 +56,7 @@ public class InspoActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<PeliculaAPI>> call, Throwable t) {
-                Toast.makeText(getBaseContext(), R.string.errAPI, Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), R.string.errAPI, Toast.LENGTH_LONG).show();
             }
         });
     }

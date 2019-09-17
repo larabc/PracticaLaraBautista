@@ -35,7 +35,7 @@ public class PeliculaAdapter extends ArrayAdapter<Pelicula> {
         String title = data.get(position).getTitle();
         int rating = data.get(position).getRating();
 
-        if (rating==0||rating==1){
+        if (rating<2){
             tv_rating.setTextColor(context.getResources().getColor(R.color.colorRed));
         } else if (rating==2||rating==3) {
             tv_rating.setTextColor(context.getResources().getColor(R.color.colorBlack));
