@@ -38,10 +38,19 @@ public class InspoActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
         progressBar = findViewById(R.id.progressbar);
 
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(R.string.txt_Ghibli);
         getFilmsFromServer();
 
     }
 
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
+    }
+    
     private void getFilmsFromServer() {
         MyService service = RetrofitClientInstance.getRetrofitInstance().create(MyService.class);
         Call<List<PeliculaAPI>> call = service.listPeliculasAPI();

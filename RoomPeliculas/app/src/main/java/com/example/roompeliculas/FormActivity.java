@@ -32,7 +32,14 @@ public class FormActivity extends AppCompatActivity {
 
         controller = PeliculaController.get(this);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(R.string.txt_form);
+    }
 
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
     }
 
     public void createFilm(View view) {
@@ -93,8 +100,7 @@ public class FormActivity extends AppCompatActivity {
                 et_rating.setError(getString(R.string.errEmptyRating));
             }
         }
-
-
+        
         return fieldsOk;
     }
 }
