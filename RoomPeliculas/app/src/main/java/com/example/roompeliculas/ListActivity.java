@@ -37,14 +37,6 @@ public class ListActivity extends AppCompatActivity {
 
         prefs = getSharedPreferences("MyPreferences", MODE_PRIVATE);
 
-        String username = prefs.getString("user",null);
-        String password = prefs.getString("password",null);
-
-        if ((username==null) && (password==null))
-        {
-            goToLoginActivity();
-        }
-
         peliculas = new ArrayList<>();
         adapter = new PeliculaAdapter(this, R.layout.row, peliculas);
         listview.setAdapter(adapter);
@@ -72,7 +64,19 @@ public class ListActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        chkLogin();
         showPeliculas();
+    }
+
+    private void chkLogin() {
+
+        String username = prefs.getString("user",null);
+        String password = prefs.getString("password",null);
+
+        if ((username==null) && (password==null))
+        {
+            goToLoginActivity();
+        }
     }
 
     private void showPeliculas() {
