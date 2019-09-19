@@ -42,7 +42,6 @@ public class ListActivity extends AppCompatActivity {
         listview.setAdapter(adapter);
 
 
-
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -52,14 +51,7 @@ public class ListActivity extends AppCompatActivity {
             }
         });
 
-
     }
-
-    private void goToLoginActivity() {
-        Intent intent = new Intent(ListActivity.this, LoginActivity.class);
-        startActivity(intent);
-    }
-
 
     @Override
     protected void onResume() {
@@ -77,6 +69,12 @@ public class ListActivity extends AppCompatActivity {
         {
             goToLoginActivity();
         }
+    }
+
+
+    private void goToLoginActivity() {
+        Intent intent = new Intent(ListActivity.this, LoginActivity.class);
+        startActivity(intent);
     }
 
     private void showPeliculas() {
