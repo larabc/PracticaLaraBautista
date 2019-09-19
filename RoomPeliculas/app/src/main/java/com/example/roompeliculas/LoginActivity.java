@@ -19,8 +19,6 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle(R.string.actionbar_title);
         et_user = findViewById(R.id.et_name);
         et_password = findViewById(R.id.et_password);
 
